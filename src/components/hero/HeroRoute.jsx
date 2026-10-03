@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-const ROUTE = 'M 48 392 L 206 240 L 360 64';
+const ROUTE = 'M 48 392 C 110 382 128 264 206 240 C 278 218 317 140 360 64';
 const nodes = [
     { x: 48, y: 392, label: 'Pickup', sub: 'Your doorstep', align: 'right' },
     { x: 206, y: 240, label: 'Hub', sub: 'Nagpur', align: 'right' },
