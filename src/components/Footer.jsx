@@ -1,12 +1,12 @@
 import React from 'react';
 import { MapPinIcon, PhoneIcon, MailIcon, GlobeIcon } from 'lucide-react';
 import { contactDetails } from '../data/company';
-import { Logo } from './Logo';
+
 const columns = [
     {
         title: 'Company',
         links: [
-            { label: 'About', href: '#about' },
+            { label: 'About', href: '/about-us' },
             { label: 'Mission & Vision', href: '#about' },
             { label: 'Contact', href: '#contact' }
         ]
@@ -34,7 +34,11 @@ export function Footer() {
       <div className="container-crl pb-10 pt-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo tone="light"/>
+            <img
+  src="/logo.png"
+  alt="CRL"
+  className="h-auto w-[150px] object-contain"
+/>
             <p className="mt-6 max-w-xs font-display text-2xl font-bold leading-snug">
               Reliable Transportation. Seamless Delivery.
             </p>

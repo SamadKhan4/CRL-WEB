@@ -1,6 +1,6 @@
 export const navLinks = [
-    { label: 'Home', href: '#top' },
-    { label: 'About Us', href: '#about' },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'Services', href: '#services', hasDropdown: true },
     { label: 'Projects', href: '#process' },
     { label: 'Contact Us', href: '#contact' }
