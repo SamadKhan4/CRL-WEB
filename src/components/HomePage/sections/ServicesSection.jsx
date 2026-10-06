@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { services } from '../../data/services';
-import { Reveal } from '../ui/Reveal';
+import { services } from '../../../data/services';
+import { Reveal } from '../../ui/Reveal';
 export function ServicesSection() {
     const [active, setActive] = useState(0);
     return (<section id="services" aria-labelledby="services-heading" className="bg-off py-20 sm:py-28">

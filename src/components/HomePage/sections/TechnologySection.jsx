@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, FileCheck2Icon, HeadsetIcon } from 'lucide-react';
-import { techFeatures, sampleShipment } from '../../data/technology';
-import { easeOut } from '../../utils/motion';
-import { Reveal } from '../ui/Reveal';
+import { techFeatures, sampleShipment } from '../../../data/technology';
+import { easeOut } from '../../../utils/motion';
+import { Reveal } from '../../ui/Reveal';
 export function TechnologySection() {
     return (<section id="technology" aria-labelledby="tech-heading" className="bg-white py-20 sm:py-28">
       <div className="container-crl grid gap-14 lg:grid-cols-12 lg:gap-16">

@@ -1,6 +1,6 @@
 import React from 'react';
-import { additionalServices } from '../../data/company';
-import { Reveal } from '../ui/Reveal';
+import { additionalServices } from '../../../data/company';
+import { Reveal } from '../../ui/Reveal';
 export function AdditionalServices() {
     return (<section aria-labelledby="extras-heading" className="bg-off py-20 sm:py-24">
       <div className="container-crl grid gap-10 lg:grid-cols-12 lg:gap-16">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Reveal } from '../ui/Reveal';
+import { Reveal } from '../../ui/Reveal';
 const logoSlots = Array.from({ length: 6 }, (_, i) => i);
 export function ClientTrust() {
     return (<section aria-labelledby="clients-heading" className="bg-white py-20 sm:py-24">

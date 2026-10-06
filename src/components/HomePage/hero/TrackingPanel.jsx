@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Loader2Icon, AlertCircleIcon, InfoIcon, XIcon } from 'lucide-react';
-import { useShipmentTracking } from '../../hooks/useShipmentTracking';
-import { trackingStages } from '../../utils/tracking';
-import { easeOut } from '../../utils/motion';
+import { useShipmentTracking } from '../../../hooks/useShipmentTracking';
+import { trackingStages } from '../../../utils/tracking';
+import { easeOut } from '../../../utils/motion';
 export function TrackingPanel() {
     const [lr, setLr] = useState('');
     const { state, track, reset } = useShipmentTracking();

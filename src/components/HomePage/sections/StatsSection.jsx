@@ -1,6 +1,6 @@
 import React from 'react';
-import { placeholderStats } from '../../data/company';
-import { CountUp } from '../ui/CountUp';
+import { placeholderStats } from '../../../data/company';
+import { CountUp } from '../../ui/CountUp';
 
 export function StatsSection({ showPlaceholders }) {
   return (

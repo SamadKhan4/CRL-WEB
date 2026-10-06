@@ -1,8 +1,8 @@
 import React from 'react';
-import aboutImage from '../../assets/About.png';
-import { Eyebrow } from '../ui/Eyebrow';
-import { ButtonLink } from '../ui/ButtonLink';
-import { Reveal } from '../ui/Reveal';
+import aboutImage from '../../../assets/About.png';
+import { Eyebrow } from '../../ui/Eyebrow';
+import { ButtonLink } from '../../ui/ButtonLink';
+import { Reveal } from '../../ui/Reveal';
 export function AboutSection() {
     return (<section id="about" aria-labelledby="about-heading" className="bg-off py-20 sm:py-28">
       <div className="container-crl grid items-center gap-12 lg:grid-cols-12 lg:gap-16">

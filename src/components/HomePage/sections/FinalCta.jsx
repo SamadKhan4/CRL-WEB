@@ -1,9 +1,9 @@
 import React from 'react';
 import { PhoneIcon } from 'lucide-react';
-import { images } from '../../data/images';
-import { contactDetails } from '../../data/company';
-import { ButtonLink } from '../ui/ButtonLink';
-import { Reveal } from '../ui/Reveal';
+import { images } from '../../../data/images';
+import { contactDetails } from '../../../data/company';
+import { ButtonLink } from '../../ui/ButtonLink';
+import { Reveal } from '../../ui/Reveal';
 export function FinalCta() {
     return (<section id="quote" aria-labelledby="cta-heading" className="final-cta text-white">
       <div className="final-cta__card relative overflow-hidden bg-navy-900 py-24 sm:py-32">

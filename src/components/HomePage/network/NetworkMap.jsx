@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { hubCity, networkCities } from '../../data/network';
-import { MAP_HEIGHT, MAP_WIDTH, arcPath, project } from '../../utils/geo';
+import { hubCity, networkCities } from '../../../data/network';
+import { MAP_HEIGHT, MAP_WIDTH, arcPath, project } from '../../../utils/geo';
 const regionLabels = [
     { text: 'VIDARBHA', x: 700, y: 300 },
     { text: 'MARATHWADA', x: 360, y: 300 },

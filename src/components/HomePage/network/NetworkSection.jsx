@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MapPinIcon } from 'lucide-react';
-import { networkCities, transitTiers } from '../../data/network';
-import { Reveal } from '../ui/Reveal';
-import { ButtonLink } from '../ui/ButtonLink';
+import { networkCities, transitTiers } from '../../../data/network';
+import { Reveal } from '../../ui/Reveal';
+import { ButtonLink } from '../../ui/ButtonLink';
 import { NetworkMap } from './NetworkMap';
 export function NetworkSection() {
     const [tier, setTier] = useState('next');

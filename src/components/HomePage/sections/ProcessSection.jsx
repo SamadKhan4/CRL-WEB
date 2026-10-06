@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { journeySteps } from '../../data/process';
-import { easeOut } from '../../utils/motion';
-import { Reveal } from '../ui/Reveal';
+import { journeySteps } from '../../../data/process';
+import { easeOut } from '../../../utils/motion';
+import { Reveal } from '../../ui/Reveal';
 export function ProcessSection() {
     return (<section id="process" aria-labelledby="process-heading" className="bg-off py-20 sm:py-28">
       <div className="container-crl">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRightIcon, MapPinIcon, TruckIcon } from 'lucide-react';
-import { easeOut } from '../../utils/motion';
+import { easeOut } from '../../../utils/motion';
 import { HeroRoute } from './HeroRoute';
 
 export function Hero() {

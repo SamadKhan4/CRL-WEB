@@ -1,6 +1,6 @@
 import React from 'react';
-import { industries } from '../../data/company';
-import { Reveal } from '../ui/Reveal';
+import { industries } from '../../../data/company';
+import { Reveal } from '../../ui/Reveal';
 export function IndustriesSection() {
     return (<section id="industries" aria-labelledby="industries-heading" className="bg-white py-20 sm:py-28">
       <div className="container-crl">

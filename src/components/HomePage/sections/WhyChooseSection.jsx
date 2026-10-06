@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PlusIcon } from 'lucide-react';
-import { commitments } from '../../data/company';
-import { images } from '../../data/images';
-import { easeOut } from '../../utils/motion';
-import { Reveal } from '../ui/Reveal';
+import { commitments } from '../../../data/company';
+import { images } from '../../../data/images';
+import { easeOut } from '../../../utils/motion';
+import { Reveal } from '../../ui/Reveal';
 export function WhyChooseSection() {
     const [open, setOpen] = useState(0);
     return (<section aria-labelledby="why-heading" className="bg-white py-20 sm:py-28">

@@ -1,6 +1,6 @@
 import React from 'react';
-import { trustValues } from '../../data/company';
-import { Reveal } from '../ui/Reveal';
+import { trustValues } from '../../../data/company';
+import { Reveal } from '../../ui/Reveal';
 export function TrustStrip() {
     return (<section aria-label="Our commitments" className="bg-white pb-6 pt-14 sm:pt-16">
       <div className="container-crl">

@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon, CheckIcon } from "lucide-react";
-import serviceImage from "../../assets/service.jpg";
-import { ptlBenefits } from "../../data/company";
-import { ptlFlow } from "../../data/process";
-import { easeOut } from "../../utils/motion";
-import { Reveal } from "../ui/Reveal";
+import serviceImage from "../../../assets/service.jpg";
+import { ptlBenefits } from "../../../data/company";
+import { ptlFlow } from "../../../data/process";
+import { easeOut } from "../../../utils/motion";
+import { Reveal } from "../../ui/Reveal";
 export function PtlSection() {
   return (
     <section
