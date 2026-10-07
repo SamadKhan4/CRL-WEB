@@ -6,7 +6,7 @@ import { TrackingPanel } from '../components/HomePage/hero/TrackingPanel';
 import { TrustStrip } from '../components/HomePage/sections/TrustStrip';
 import { PtlSection } from '../components/HomePage/sections/PtlSection';
 import { ServicesSection } from '../components/HomePage/sections/ServicesSection';
-import { NetworkSection } from '../components/HomePage/network/NetworkSection';
+// import { NetworkSection } from '../components/HomePage/network/NetworkSection';
 import { TechnologySection } from '../components/HomePage/sections/TechnologySection';
 import { WhyChooseSection } from '../components/HomePage/sections/WhyChooseSection';
 import { IndustriesSection } from '../components/HomePage/sections/IndustriesSection';
@@ -30,7 +30,7 @@ export function HomePage({ showPlaceholders = true }) {
           <TrustStrip />
           <PtlSection />
           <ServicesSection />
-          <NetworkSection />
+          {/* <NetworkSection /> */}
           <TechnologySection />
           
           <WhyChooseSection />
