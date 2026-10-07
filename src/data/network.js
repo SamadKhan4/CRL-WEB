@@ -44,3 +44,14 @@ export const networkCities = [
     { name: 'Vasai', tier: '4d', lat: 19.39, lon: 72.84, labelDx: -10, anchor: 'end' },
     { name: 'Pune', tier: '4d', lat: 18.52, lon: 73.86 }
 ];
+export const networkHero = {
+  title: [
+    'Strong Regional',
+    'Connectivity.',
+    'Reliable Transit.',
+  ],
+  description:
+    'CRL connects businesses across key destinations in Vidarbha and Maharashtra through a structured transportation network built around dependable movement, timely delivery, and professional service.',
+  ctaText: 'Request a Quote',
+  ctaHref: '#quote',
+};

@@ -10,7 +10,7 @@ export function NetworkSection() {
     const [hovered, setHovered] = useState(null);
     const activeTier = transitTiers.find((t) => t.id === tier) ?? transitTiers[0];
     const cities = networkCities.filter((c) => c.tier === tier);
-    return (<section id="network" aria-labelledby="network-heading" className="bg-navy-900 py-20 text-white sm:py-28">
+    return (<section id="network" aria-labelledby="network-heading" className="bg-navy-900 mt-[5vw]  text-navy-900 sm:py-28 py-20 text-white sm:py-28">
       <div className="container-crl">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
