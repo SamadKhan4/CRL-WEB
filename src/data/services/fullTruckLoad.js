@@ -1,4 +1,5 @@
-
+import ftlDeliveryImage from '../../assets/Services/service-delivery.png';
+import ftlPackingImage from '../../assets/Services/service-packing.png';
 export const ftlData = {
   slug: "full-truck-load",
   serviceName: "Full Truck Load",
@@ -36,6 +37,8 @@ export const ftlData = {
     images: [
       null, // Exact image filename confirm karna hai
       null, // Exact image filename confirm karna hai
+     ftlDeliveryImage,
+  ftlPackingImage,
     ],
 
     cards: [
