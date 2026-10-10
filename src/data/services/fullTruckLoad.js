@@ -35,6 +35,8 @@ export const ftlData = {
       "CRL focuses on reliable movement, timely delivery, safe handling, transparent operations, and professional service throughout the transportation process.",
 
     images: [
+      null, // Exact image filename confirm karna hai
+      null, // Exact image filename confirm karna hai
      ftlDeliveryImage,
   ftlPackingImage,
     ],

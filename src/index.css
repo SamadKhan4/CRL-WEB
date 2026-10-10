@@ -329,3 +329,6 @@
   .hero-tracking__container { width: calc(100% - 40px); }
   .hero-tracking__card { padding-inline: 18px; }
 }
+.hero-nav a.is-active {
+  color: #e53935;
+}

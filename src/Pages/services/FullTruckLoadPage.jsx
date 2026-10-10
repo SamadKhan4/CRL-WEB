@@ -22,6 +22,7 @@ export function FullTruckLoadPage() {
         <Header />
 
         <main id="main">
+          <ServiceHero serviceName="Full Truck Load" />
           <ServiceHero serviceName={serviceName} />
 
           <section className="w-full bg-[#F6F7F9] py-[2.8571vw] max-lg:py-10">
