@@ -56,7 +56,7 @@ export function AboutUsHero() {
         className="
           absolute
           left-[80px]
-          top-[315px]
+          top-[498px]
           text-left
           text-white
 
@@ -70,7 +70,7 @@ export function AboutUsHero() {
           className="
             font-Instrument Sans
             text-[48px]
-            font-normal
+            font-bold
             leading-[1.1]
             tracking-[-0.5px]
 
@@ -89,7 +89,7 @@ export function AboutUsHero() {
             justify-start
             gap-[10px]
             text-left
-            text-[12px]
+            text-[15px]
             font-normal
             leading-[1.4]
 
