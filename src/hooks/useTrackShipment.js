@@ -22,6 +22,7 @@ export function useTrackShipment() {
       const data = await fetchShipment(docketNo);
       setState({ status: 'success', data, error: '' });
     } catch (err) {
+      console.error('[tracking] request failed:', err);
       setState({
         status: 'error',
         data: null,

@@ -1,13 +1,11 @@
 import { buildShipment } from '../data/trackShipmentMock';
 
-/**
- * Set VITE_TRACKING_API_URL in .env to switch from mock data to the real backend.
- *
- *   GET {VITE_TRACKING_API_URL}?docket=CRL8492019
- *   200 -> JSON in the shape produced by buildShipment() (data/trackShipmentMock.js)
- *   404 -> shipment not found
- */
+
 const API_URL = import.meta.env.VITE_TRACKING_API_URL;
+
+if (import.meta.env.DEV) {
+  console.info('[tracking] data source:', API_URL || 'mock data');
+}
 
 export class ShipmentNotFoundError extends Error {}
 
