@@ -1,3 +1,4 @@
+import { quoteRequestHref } from './company';
 export const aboutData = {
   whoWeAre: {
     eyebrow: 'Who We Are',
@@ -63,6 +64,11 @@ export const commitmentItems = [
     id: 5,
     title: 'Professional Approach',
     description: 'Professional service focused on reliability, care and customer satisfaction.',
+  },
+  {
+    id: 6,
+    title: 'Smooth Delivery',
+    description: 'Professional on Hand Delivery and customer satisfaction.',
   },
 ];
 import StepOne from '../assets/AboutUs/StepOne.jpg';
@@ -134,14 +140,14 @@ export const ctaSection = {
     'Talk to CRL about your shipment requirements and let our team help plan the right transportation solution.',
 
   buttons: [
-    {
-      label: 'Request a Quote',
-      to: '/contact-us',
-      variant: 'primary',
-    },
+   {
+  label: 'Request a Quote',
+  to: quoteRequestHref,
+  variant: 'primary',
+},
     {
       label: 'Contact CRL',
-      to: '/contact-us',
+      to: '/contact',
       variant: 'secondary',
     },
   ],

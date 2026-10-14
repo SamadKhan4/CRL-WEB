@@ -6,6 +6,12 @@ import { AboutUs } from './Pages/AboutUs';
 import { NetworkPage } from './Pages/NetworkPage';
 import { PartTruckLoadPage } from './Pages/services/PartTruckLoadPage';
 import { FullTruckLoadPage } from './Pages/services/FullTruckLoadPage';
+import { PackersMoversPage } from './Pages/services/PackersMoversPage';
+import { DoorPickupDeliveryPage } from './Pages/services/DoorPickupDeliveryPage';
+import { HubToHubConnectivityPage } from './Pages/services/HubToHubConnectivityPage';
+import { MultimodeTransportationPage } from './Pages/services/MultimodeTransportationPage';
+import { ContactPage } from './Pages/ContactPage';
+import { TrackShipmentPage } from './Pages/TrackShipmentPage';
 
 export function App({ showPlaceholders = true }) {
   return (
@@ -34,6 +40,34 @@ export function App({ showPlaceholders = true }) {
           path="/services/full-truck-load"
           element={<FullTruckLoadPage />}
           />
+           <Route
+          path="/services/packers-movers"
+          element={<PackersMoversPage />}
+          />
+           <Route
+          path="/services/door-pickup-delivery"
+          element={<DoorPickupDeliveryPage />}
+          />
+
+        <Route
+          path="/services/hub-to-hub-connectivity"
+          element={<HubToHubConnectivityPage />}
+        />
+
+        <Route
+          path="/services/multimode-transportation"
+          element={<MultimodeTransportationPage />}
+        />
+
+        <Route
+          path="/contact"
+          element={<ContactPage />}
+        />
+
+        <Route
+          path="/track-shipment"
+          element={<TrackShipmentPage />}
+        />
       </Routes>
     </BrowserRouter>
   );

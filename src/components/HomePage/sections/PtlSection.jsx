@@ -766,7 +766,7 @@ export function PtlSection() {
               className="mt-[2vw] max-lg:mt-[28px]"
             >
               <a
-                href="#services"
+                href="/services/part-truck-load"
                 className="
                   inline-flex
                   items-center

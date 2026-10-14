@@ -22,7 +22,7 @@ export function FullTruckLoadPage() {
         <Header />
 
         <main id="main">
-          <ServiceHero serviceName="Full Truck Load" />
+         
           <ServiceHero serviceName={serviceName} />
 
           <section className="w-full bg-[#F6F7F9] py-[2.8571vw] max-lg:py-10">
@@ -50,20 +50,15 @@ export function FullTruckLoadPage() {
                 />
 
                 <ServiceBenefits
-                  images={benefits.images
-                    .filter(Boolean)
-                    .map((src, index) => ({
-                      src,
-                      alt: `FTL transportation image ${index + 1}`,
-                    }))}
-                  kicker={benefits.eyebrow}
-                  heading={benefits.heading}
-                  description={benefits.description}
-                  benefits={benefits.cards.map((card) => ({
-                    ...card,
-                    Icon: undefined,
-                  }))}
-                />
+                 
+  images={benefits.images}
+  kicker={benefits.eyebrow}
+  heading={benefits.heading}
+  description={benefits.description}
+  benefits={benefits.cards}
+/>
+                 
+                
 
                 <AdditionalPtlSupport
                   kicker={additionalSupport.eyebrow}

@@ -1,4 +1,4 @@
-
+import { quoteRequestHref } from '../../data/company';
 export const hubToHubData = {
   slug: "hub-to-hub-connectivity",
   serviceName: "Hub-to-Hub Connectivity",
@@ -81,7 +81,7 @@ export const hubToHubData = {
     actions: [
       {
         label: "Request a Quote",
-        href: "#quote",
+        href: quoteRequestHref,
       },
       {
         label: "Contact CRL",

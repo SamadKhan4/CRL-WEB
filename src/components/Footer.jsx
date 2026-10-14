@@ -1,30 +1,32 @@
 import React from 'react';
 import { MapPinIcon, PhoneIcon, MailIcon, GlobeIcon } from 'lucide-react';
 import { contactDetails } from '../data/company';
-
+import { quoteRequestHref } from '../data/company';
 const columns = [
     {
         title: 'Company',
         links: [
             { label: 'About', href: '/about-us' },
             { label: 'Mission & Vision', href: '#about' },
-            { label: 'Contact', href: '#contact' }
+            { label: 'Contact', href: '/contact' }
         ]
     },
     {
         title: 'Services',
         links: [
-            { label: 'PTL', href: '#ptl' },
-            { label: 'FTL', href: '#services' },
-            { label: 'Packers & Movers', href: '#services' },
-            { label: 'Door Pickup & Delivery', href: '#services' }
+            { label: 'PTL', href: '/services/part-truck-load' },
+            { label: 'FTL', href: '/services/full-truck-load' },
+            { label: 'PackersMovers', href: '/services/packers-movers' },
+            { label: 'Door Pickup & Delivery', href: '/services/door-pickup-delivery' },
+            { label: 'Hub-to-Hub Connectivity', href: '/services/hub-to-hub-connectivity' },
+            { label: 'Multimode Transportation', href: '/services/multimode-transportation' }
         ]
     },
     {
         title: 'Support',
         links: [
             { label: 'Track Shipment', href: '#track' },
-            { label: 'Request Quote', href: '#quote' },
+            { label: 'Request Quote', href: quoteRequestHref },
             { label: 'POD Tracking', href: '#track' }
         ]
     }
@@ -73,7 +75,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${contactDetails.email}`} className="flex items-center gap-3 hover:text-white">
+                <a href={quoteRequestHref} className="flex items-center gap-3 hover:text-white">
                   <MailIcon className="h-4 w-4 shrink-0 text-crl-light" aria-hidden="true"/>
                   {contactDetails.email}
                 </a>

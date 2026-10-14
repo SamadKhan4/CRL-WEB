@@ -1,0 +1,31 @@
+import React from 'react';
+
+import { JourneyStepper } from './JourneyStepper';
+import { MovementTimeline } from './MovementTimeline';
+import { ShipmentSpecs } from './ShipmentSpecs';
+import { FleetTelematics } from './FleetTelematics';
+import { RouteMapCard } from './RouteMapCard';
+
+export function TrackResults({ shipment }) {
+  return (
+    <div
+      className="
+        mx-auto w-[83vw] space-y-[1.4vw]
+        max-lg:w-[92vw] max-lg:space-y-5
+        max-md:w-[calc(100%-32px)]
+      "
+    >
+      <JourneyStepper journey={shipment.journey} />
+
+      <div className="grid grid-cols-[minmax(0,2.15fr)_minmax(0,1fr)] items-start gap-[1.4vw] max-lg:grid-cols-1 max-lg:gap-5">
+        <MovementTimeline timeline={shipment.timeline} />
+
+        <div className="space-y-[1.4vw] max-lg:space-y-5">
+          <ShipmentSpecs specs={shipment.specifications} />
+          <FleetTelematics telematics={shipment.telematics} />
+          <RouteMapCard route={shipment.route} />
+        </div>
+      </div>
+    </div>
+  );
+}

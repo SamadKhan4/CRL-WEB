@@ -1,4 +1,5 @@
 export const hubCity = { name: 'Nagpur', lat: 21.15, lon: 79.09 };
+import { quoteRequestHref } from './company';
 export const transitTiers = [
     { id: 'next', label: 'Next Day' },
     { id: '2d', label: '2 Days' },
@@ -53,5 +54,5 @@ export const networkHero = {
   description:
     'CRL connects businesses across key destinations in Vidarbha and Maharashtra through a structured transportation network built around dependable movement, timely delivery, and professional service.',
   ctaText: 'Request a Quote',
-  ctaHref: '#quote',
+  ctaHref: quoteRequestHref,
 };

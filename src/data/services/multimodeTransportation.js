@@ -1,4 +1,4 @@
-
+import { quoteRequestHref } from '../../data/company';
 export const multimodeTransportationData = {
   id: "multimode-transportation",
   name: "Multimode Transportation",
@@ -73,12 +73,14 @@ export const multimodeTransportationData = {
   },
 
   cta: {
-    title: "Have a Smaller Shipment to Move?",
-    description:
-      "Choose CRL PTL for practical and dependable transportation of small and medium consignments.",
-    primaryButton: "Request a Quote",
-    secondaryButton: "Contact CRL",
-    phoneLabel: "Call CRL",
-    phone: "+91 7499358403"
-  }
+  title: "Have a Smaller Shipment to Move?",
+  description:
+    "Choose CRL PTL for practical and dependable transportation of small and medium consignments.",
+  primaryButton: "Request a Quote",
+  primaryHref: quoteRequestHref,
+  secondaryButton: "Contact CRL",
+  secondaryHref: "/contact",
+  phoneLabel: "Call CRL",
+  phone: "+91 7499358403"
+}
 };

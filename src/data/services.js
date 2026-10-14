@@ -7,7 +7,7 @@ export const services = [
         description: 'Cost-effective transportation for shipments that do not need a complete vehicle.',
         image: serviceImage,
         alt: 'Workers loading cartons into a goods truck at a loading dock',
-        href: '#ptl'
+        href: '/services/part-truck-load'
     },
     {
         number: '02',
@@ -15,7 +15,7 @@ export const services = [
         description: 'Dedicated vehicle transportation for industrial, commercial and bulk consignments.',
         image: images.ftl,
         alt: 'Truck loaded with industrial machinery secured with straps',
-        href: '#quote'
+        href: '/services/full-truck-load'
     },
     {
         number: '03',
@@ -23,7 +23,7 @@ export const services = [
         description: 'End-to-end home, office and business relocation support.',
         image: images.movers,
         alt: 'Movers carrying wrapped furniture and boxes into a truck',
-        href: '#quote'
+        href: '/services/packers-movers'
     },
     {
         number: '04',
@@ -31,7 +31,7 @@ export const services = [
         description: 'Convenient pickup from origin and delivery to the required destination.',
         image: images.pickup,
         alt: 'Driver collecting cartons from a shop front',
-        href: '#quote'
+        href: '/services/door-pickup-deliver'
     },
     {
         number: '05',
@@ -39,7 +39,7 @@ export const services = [
         description: 'Flexible movement between hubs based on customer requirements.',
         image: images.sorting,
         alt: 'Warehouse team sorting cartons on pallets',
-        href: '#network'
+        href: '/services/hub-to-hub-connectivity'
     },
     {
         number: '06',
@@ -47,6 +47,6 @@ export const services = [
         description: 'Transportation solutions using suitable modes based on shipment requirements.',
         image: images.hero,
         alt: 'Goods truck travelling on a highway at dusk',
-        href: '#quote'
+        href: '/services/multimode-transportation'
     }
 ];

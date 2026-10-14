@@ -3,6 +3,7 @@ import aboutImage from '../../../assets/About.png';
 import { Eyebrow } from '../../ui/Eyebrow';
 import { ButtonLink } from '../../ui/ButtonLink';
 import { Reveal } from '../../ui/Reveal';
+import { Target, Megaphone } from 'lucide-react';
 
 export function AboutSection() {
   return (
@@ -42,28 +43,86 @@ export function AboutSection() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <dl className="mt-[2.8571vw] grid gap-[2.2857vw] border-t border-line pt-[2.2857vw] sm:grid-cols-2 max-lg:mt-10 max-lg:gap-8 max-lg:pt-8">
-              <div>
-                <dt className="font-display text-[1vw] font-bold text-crl max-lg:text-sm">
-                  Mission
-                </dt>
-                <dd className="mt-[0.5714vw] font-display text-[1.2857vw] font-bold leading-snug text-ink max-lg:mt-2 max-lg:text-lg">
-                  Reliable, efficient and transparent transportation.
-                </dd>
-              </div>
+            <div className="mt-[2.8571vw] grid grid-cols-2 gap-[1.4286vw] max-lg:mt-10 max-lg:gap-5 max-sm:grid-cols-1">
+  {[
+    {
+      number: '01',
+      title: 'Mission',
+      description:
+        'Reliable, efficient and transparent transportation.',
+      variant: 'light',
+    },
+    {
+      number: '02',
+      title: 'Vision',
+      description:
+        'A trusted, technology-driven transportation partner.',
+      variant: 'dark',
+    },
+  ].map((card) => {
+    const isDark = card.variant === 'dark';
+    const Icon = isDark ? Megaphone : Target;
 
-              <div>
-                <dt className="font-display text-[1vw] font-bold text-crl max-lg:text-sm">
-                  Vision
-                </dt>
-                <dd className="mt-[0.5714vw] font-display text-[1.2857vw] font-bold leading-snug text-ink max-lg:mt-2 max-lg:text-lg">
-                  A trusted, technology-driven transportation partner.
-                </dd>
-              </div>
-            </dl>
+    return (
+      <div
+        key={card.number}
+        className={`
+          relative min-h-[13.045vw] w-full overflow-hidden
+          rounded-[0.4686vw] border-t-2 border-[#D71920]
+          p-[1.1429vw]
+          shadow-[0px_0px_4.37px_0px_#00000040]
+          max-lg:min-h-[182px] max-lg:rounded-[6.56px]
+          max-lg:p-4
+          ${isDark ? 'bg-[#07111F]' : 'bg-white'}
+        `}
+      >
+        <div className="flex items-start justify-between">
+          <span
+            className={`
+              font-manrope text-[2.8571vw] font-semibold leading-none
+              max-lg:text-[40px]
+              ${isDark ? 'text-white/15' : 'text-[#E8EBEF]'}
+            `}
+          >
+            {card.number}
+          </span>
+
+          <Icon
+            size={18}
+            strokeWidth={1.5}
+            className="mt-[0.3571vw] shrink-0 text-[#D71920] max-lg:mt-[5px]"
+            aria-hidden="true"
+          />
+        </div>
+
+        <h3
+          className={`
+            mt-[0.5714vw] font-['Instrument_Sans',sans-serif]
+            text-[1.2857vw] font-normal leading-[100%]
+            max-lg:mt-2 max-lg:text-lg
+            ${isDark ? 'text-white' : 'text-[#07111F]'}
+          `}
+        >
+          {card.title}
+        </h3>
+
+        <p
+          className={`
+            mt-[0.8571vw] font-['Instrument_Sans',sans-serif]
+            text-[1.1857vw] font-normal leading-[100%]
+            max-lg:mt-3 max-lg:text-base
+            ${isDark ? 'text-white/65' : 'text-[#5A6068]'}
+          `}
+        >
+          {card.description}
+        </p>
+      </div>
+    );
+  })}
+</div>
 
             <div className="mt-[2.8571vw] max-lg:mt-10">
-              <ButtonLink href="#contact" variant="dark" size="lg">
+              <ButtonLink href="/contact" variant="dark" size="lg">
                 Discover CRL
               </ButtonLink>
             </div>

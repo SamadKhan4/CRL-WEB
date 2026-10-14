@@ -55,3 +55,7 @@ export const contactDetails = {
     email: 'info@crl-transport.com',
     website: 'www.crl-transport.com'
 };
+export const quoteRequestHref =
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    contactDetails.email
+  )}&su=${encodeURIComponent('Quote request — CRL Transport')}`;

@@ -1,3 +1,4 @@
+import { quoteRequestHref } from '../data/company';
 export const ptlData = {
   slug: "part-truck-load",
   serviceName: "Part Truck Load",
@@ -91,7 +92,7 @@ export const ptlData = {
     description:
       "Choose CRL PTL for practical and dependable transportation of small and medium consignments.",
     actions: [
-      { label: "Request a Quote", href: "#quote" },
+      { label: "Request a Quote", href: quoteRequestHref },
       { label: "Contact CRL", href: "/contact" },
     ],
     phone: {

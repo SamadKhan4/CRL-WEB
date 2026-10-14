@@ -3,7 +3,7 @@ export const navLinks = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Network', href: '/network' },
   { label: 'Services', href: '/services', hasDropdown: true },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export const serviceMenu = [

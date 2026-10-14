@@ -120,7 +120,7 @@ export function WhoWeAre() {
                 leading-[1.08]
                 tracking-[-0.0714vw]
                 text-[#07111F]
- mb-[0.1815vw]
+ mb-[0.0815vw]
                 max-lg:max-w-[500px]
                 max-lg:text-[40px]
                 max-md:text-[34px]

@@ -2,7 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Phone } from 'lucide-react';
-
+import {
+ quoteRequestHref,
+} from '../../data/company';
 import truckYardImage from '../../assets/Services/ServiceBottom.jpg';
 
 export function ServiceCta({
@@ -11,12 +13,12 @@ export function ServiceCta({
   highlight = 'Shipment to Move?',
   description = 'Choose CRL PTL for practical and dependable transportation of small and medium consignments.',
   primaryLabel = 'Request a Quote',
-  primaryHref = '#quote',
+  primaryHref = quoteRequestHref,
   secondaryLabel = 'Contact CRL',
   secondaryHref = '/contact',
   phoneLabel = 'Call CRL',
   phoneNumber = '+91 7499358403',
-  phoneHref = '+917499358403',
+  phoneHref = 'tel:+917499358403',
 }) {
   return (
     <section className="mt-[3vw] w-full max-lg:mt-10">

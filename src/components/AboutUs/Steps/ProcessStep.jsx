@@ -289,7 +289,7 @@ export function ProcessStep({
 
             {/* VIEW SERVICE */}
             <Link
-              to="/services"
+              to="/services/part-truck-load"
               className="
                 mt-[28px]
                 flex

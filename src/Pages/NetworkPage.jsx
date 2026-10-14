@@ -17,11 +17,14 @@ export function NetworkPage() {
 
         <main id="main">
           <Hero
+          showLocationDetails={false}
+               showSectionNav={false}
             title={
               <>
                 <span>Strong Regional</span>
                 <span>Connectivity.</span>
                 <span><em>Reliable</em> Transit.</span>
+                
               </>
             }
             description={networkHero.description}
