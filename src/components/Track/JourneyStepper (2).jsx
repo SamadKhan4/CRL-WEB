@@ -26,25 +26,25 @@ export function JourneyStepper({ journey }) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: easeOut }}
-      className="rounded-[0.8vw] border border-[#E9EDF2] bg-white p-[1.4vw] shadow-[0_4px_20px_rgba(7,17,31,0.03)] max-lg:rounded-xl max-lg:p-5"
+      className="rounded-[1vw] border border-[#E9EDF2] bg-white p-[1.75vw] shadow-[0_4px_20px_rgba(7,17,31,0.03)] max-lg:rounded-xl max-lg:p-5"
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 className="font-display text-[1.05vw] font-bold text-navy-900 max-lg:text-lg">
+          <h2 className="font-display text-[length:max(14px,1.31vw)] font-bold text-navy-900 max-lg:text-lg">
             Your Shipment Journey — From Pickup to Delivery
           </h2>
-          <p className="mt-[0.2vw] text-[0.65vw] text-[#5D6672] max-lg:text-xs">
+          <p className="mt-[0.25vw] text-[length:max(11px,0.81vw)] text-[#5D6672] max-lg:text-xs">
             Full {totalStages}-stage custody tracking verified with physical scans and automated checkpoints.
           </p>
         </div>
-        <span className="flex items-center gap-[0.4vw] text-[0.6vw] font-bold uppercase text-[#3A4560] max-lg:gap-1.5 max-lg:text-[11px]">
-          <span className="h-[0.55vw] w-[0.55vw] animate-pulse rounded-full bg-orange-500 max-lg:h-2 max-lg:w-2" />
+        <span className="flex items-center gap-[0.5vw] text-[length:max(11px,0.75vw)] font-bold uppercase text-[#3A4560] max-lg:gap-1.5 max-lg:text-[11px]">
+          <span className="h-[0.69vw] w-[0.69vw] animate-pulse rounded-full bg-orange-500 max-lg:h-2 max-lg:w-2" />
           Stage {pad(currentStage)} of {pad(totalStages)} (Active)
         </span>
       </div>
 
-      <div className="mt-[1.4vw] overflow-x-auto max-lg:mt-5">
-        <ol className="grid min-w-[760px] grid-cols-7 gap-[0.5vw] max-lg:gap-2">
+      <div className="mt-[1.75vw] overflow-x-auto max-lg:mt-5">
+        <ol className="grid min-w-[760px] grid-cols-7 gap-[0.62vw] max-lg:gap-2">
           {stages.map((stage, index) => (
             <motion.li
               key={stage.id}
@@ -55,18 +55,18 @@ export function JourneyStepper({ journey }) {
               aria-current={stage.state === 'active' ? 'step' : undefined}
             >
               <span
-                className={`flex h-[2.4vw] w-[2.4vw] items-center justify-center rounded-[0.5vw] text-[0.7vw] font-semibold max-lg:h-10 max-lg:w-10 max-lg:rounded-lg max-lg:text-sm ${boxStyle[stage.state]}`}
+                className={`flex h-[3vw] w-[3vw] items-center justify-center rounded-[0.62vw] text-[length:max(11px,0.88vw)] font-semibold max-lg:h-10 max-lg:w-10 max-lg:rounded-lg max-lg:text-sm ${boxStyle[stage.state]}`}
               >
-                {stage.state === 'completed' && <CheckIcon className="h-[1vw] w-[1vw] max-lg:h-4 max-lg:w-4" aria-hidden="true" />}
-                {stage.state === 'active' && <TruckIcon className="h-[1vw] w-[1vw] max-lg:h-4 max-lg:w-4" aria-hidden="true" />}
+                {stage.state === 'completed' && <CheckIcon className="h-[1.25vw] w-[1.25vw] max-lg:h-4 max-lg:w-4" aria-hidden="true" />}
+                {stage.state === 'active' && <TruckIcon className="h-[1.25vw] w-[1.25vw] max-lg:h-4 max-lg:w-4" aria-hidden="true" />}
                 {stage.state === 'pending' && pad(stage.id)}
               </span>
 
-              <p className={`mt-[0.6vw] text-[0.65vw] font-bold max-lg:mt-2 max-lg:text-xs ${stage.state === 'active' ? 'text-orange-600' : 'text-navy-900'}`}>
+              <p className={`mt-[0.75vw] text-[length:max(11px,0.81vw)] font-bold max-lg:mt-2 max-lg:text-xs ${stage.state === 'active' ? 'text-orange-600' : 'text-navy-900'}`}>
                 {pad(stage.id)}. {stage.title}
               </p>
-              <p className="mt-[0.15vw] text-[0.58vw] text-[#4B5563] max-lg:text-[11px]">{stage.subtitle}</p>
-              <p className={`mt-[0.3vw] text-[0.55vw] font-bold max-lg:text-[10px] ${timeStyle[stage.state]}`}>
+              <p className="mt-[0.19vw] text-[length:max(11px,0.72vw)] text-[#4B5563] max-lg:text-[11px]">{stage.subtitle}</p>
+              <p className={`mt-[0.38vw] text-[length:max(11px,0.69vw)] font-bold max-lg:text-[10px] ${timeStyle[stage.state]}`}>
                 {stage.time}
               </p>
             </motion.li>
