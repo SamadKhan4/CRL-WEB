@@ -274,8 +274,8 @@ export function Header({ forceSolid = false }) {
             {/* Request a Quote */}
             <a
               href={quoteRequestHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              // target="_blank"
+              // rel="noopener noreferrer"
               className="hero-pill-button"
             >
               <span>Request a Quote</span>

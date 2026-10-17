@@ -12,7 +12,7 @@ import { HubToHubConnectivityPage } from './Pages/services/HubToHubConnectivityP
 import { MultimodeTransportationPage } from './Pages/services/MultimodeTransportationPage';
 import { ContactPage } from './Pages/ContactPage';
 import { TrackShipmentPage } from './Pages/TrackShipmentPage';
-
+import { RequestQuotePage } from './Pages/RequestQuotePage';
 export function App({ showPlaceholders = true }) {
   return (
     <BrowserRouter>
@@ -68,6 +68,10 @@ export function App({ showPlaceholders = true }) {
           path="/track-shipment"
           element={<TrackShipmentPage />}
         />
+         <Route 
+         path="/request-quote" 
+         element={<RequestQuotePage />} />
+
       </Routes>
     </BrowserRouter>
   );
