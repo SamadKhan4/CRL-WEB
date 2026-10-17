@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Phone } from 'lucide-react';
@@ -15,17 +14,12 @@ export function CTASection() {
   } = ctaSection;
 
   return (
-    <section className="w-full bg-[#F5F6F8] px-[12px] py-[25px]">
+    <section className="w-full bg-[#F5F6F8] px-3 py-5">
       <div
         className="
-          relative
-          mx-auto
-          w-full
-          max-w-[1500px]
-          overflow-hidden
-          rounded-[20px]
+          relative mx-auto w-full max-w-[1500px]
+          overflow-hidden rounded-[20px]
           min-h-[475px]
-
           max-md:min-h-[560px]
           max-md:rounded-[16px]
         "
@@ -35,46 +29,24 @@ export function CTASection() {
           src={backgroundImage}
           alt=""
           aria-hidden="true"
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-          "
+          className="absolute inset-0 h-full w-full object-cover"
         />
 
         {/* DARK OVERLAY */}
-        <div
-          className="
-            absolute
-            inset-0
-            bg-[#03080F]/[0.72]
-          "
-        />
+        <div className="absolute inset-0 bg-[#03080F]/[0.72]" />
 
         {/* CONTENT */}
         <div
           className="
-            relative
-            z-10
-            flex
-            min-h-[455px]
-            w-full
-            items-center
-            justify-between
-            gap-[40px]
-            px-[90px]
-            py-[60px]
-
+            relative z-10 flex min-h-[455px] w-full
+            items-center justify-between gap-10
+            px-[90px] py-[50px]
             max-[1100px]:px-[60px]
-
             max-md:min-h-[560px]
-            max-md:flex-col
-            max-md:items-start
+            max-md:flex-col max-md:items-start
             max-md:justify-center
-            max-md:px-[28px]
-            max-md:py-[45px]
+            max-md:gap-8
+            max-md:px-7 max-md:py-10
           "
         >
           {/* LEFT CONTENT */}
@@ -82,14 +54,10 @@ export function CTASection() {
             <h2
               className="
                 font-['Instrument_Sans',sans-serif]
-                text-[56px]
-                font-semibold
-                leading-[1.08]
-                tracking-[-1.8px]
+                text-[56px] font-semibold
+                leading-[1.08] tracking-[-1.8px]
                 text-white
-
                 max-[1100px]:text-[48px]
-
                 max-md:text-[38px]
                 max-md:leading-[1.08]
                 max-md:tracking-[-1px]
@@ -106,17 +74,11 @@ export function CTASection() {
 
             <p
               className="
-                mt-[22px]
-                max-w-[470px]
-
+                mt-[22px] max-w-[470px]
                 font-['Instrument_Sans',sans-serif]
-                text-[15px]
-                font-normal
-                leading-[1.55]
-                text-[#D1D5DB]
-
+                text-[15px] font-normal
+                leading-[1.55] text-[#D1D5DB]
                 max-md:mt-[18px]
-                max-md:text-[15px]
               "
             >
               {description}
@@ -125,12 +87,8 @@ export function CTASection() {
             {/* BUTTONS */}
             <div
               className="
-                mt-[30px]
-                flex
-                flex-wrap
-                items-center
-                gap-[14px]
-
+                mt-[30px] flex flex-wrap
+                items-center gap-[14px]
                 max-md:mt-[25px]
               "
             >
@@ -139,37 +97,22 @@ export function CTASection() {
                   key={button.label}
                   to={button.to}
                   className={`
-                    group
-                    flex
-                    w-fit
-                    items-center
-                    gap-[8px]
-                    rounded-full
-                    px-[10px]
-                    py-[8px]
-                    pl-[12px]
-
+                    group flex w-fit items-center
+                    gap-2 rounded-full
+                    py-2 pl-3 pr-[10px]
                     font-['Instrument_Sans',sans-serif]
-                    text-[14px]
-                    font-medium
-                    no-underline
-
-                    transition-all
-                    duration-300
-
+                    text-sm font-medium no-underline
+                    transition-all duration-300
                     ${
                       button.variant === 'primary'
                         ? `
-                          bg-white
-                          text-[#D71920]
+                          bg-white text-[#D71920]
                           hover:bg-[#D71920]
                           hover:text-white
                         `
                         : `
-                          border
-                          border-white/40
-                          bg-white/5
-                          text-white
+                          border border-white/40
+                          bg-white/5 text-white
                           hover:border-white
                           hover:bg-white
                           hover:text-[#07111F]
@@ -181,75 +124,49 @@ export function CTASection() {
 
                   <span
                     className="
-                      flex
-                      h-[28px]
-                      w-[28px]
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-[#D71920]
-                      text-white
-
-                      transition-transform
-                      duration-300
+                      flex h-7 w-7 items-center
+                      justify-center rounded-full
+                      bg-[#D71920] text-white
+                      transition-transform duration-300
                       group-hover:rotate-45
                     "
                   >
-                    <ArrowUpRight
-                      size={16}
-                      strokeWidth={2}
-                    />
+                    <ArrowUpRight size={16} strokeWidth={2} />
                   </span>
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* RIGHT PHONE */}
+          {/* RIGHT PHONE — ALIGNED WITH BUTTONS */}
           <a
             href={contact.href}
             className="
-              group
-              flex
-           
-              shrink-0
-              items-center
-              gap-[14px]
-              no-underline
-            
+              group flex shrink-0
+              translate-y-[105px]
+              items-center gap-[14px]
+              self-center no-underline
+              max-md:translate-y-0
               max-md:self-start
             "
           >
             <span
               className="
-                flex
-                h-[38px]
-                w-[38px]
-                shrink-0
-                items-center
-                justify-center
-                rounded-full
-                bg-[#E51B23]
-                text-white
-
-                transition-transform
-                duration-300
+                flex h-[42px] w-[42px] shrink-0
+                items-center justify-center
+                rounded-full bg-[#E51B23] text-white
+                transition-transform duration-300
                 group-hover:scale-110
               "
             >
-              <Phone
-                size={18}
-                strokeWidth={2}
-              />
+              <Phone size={18} strokeWidth={2} />
             </span>
 
             <span className="flex flex-col">
               <span
                 className="
                   font-['Instrument_Sans',sans-serif]
-                  text-[12px]
-                  font-normal
-                  leading-[1.2]
+                  text-xs font-normal leading-[1.2]
                   text-[#AEB4BE]
                 "
               >
@@ -260,10 +177,8 @@ export function CTASection() {
                 className="
                   mt-[3px]
                   font-['Instrument_Sans',sans-serif]
-                  text-[15px]
-                  font-semibold
-                  leading-[1.2]
-                  text-white
+                  text-[15px] font-semibold
+                  leading-[1.2] text-white
                 "
               >
                 {contact.phone}
