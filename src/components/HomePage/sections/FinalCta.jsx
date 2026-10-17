@@ -19,8 +19,8 @@ export function FinalCta() {
           relative
           overflow-hidden
           bg-navy-900
-          py-[6.8571vw]
-
+          py-[3.6571vw]
+     
           max-lg:py-24
           sm:max-lg:py-32
         "

@@ -4,7 +4,6 @@ import { CheckIcon, ClockIcon, CrosshairIcon, FlagIcon, MapPinIcon, RouteIcon, T
 
 import { easeOut } from '../../utils/motion';
 
-// supports **bold** inside description text coming from the API
 function rich(text) {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
     part.startsWith('**') ? (

@@ -25,7 +25,7 @@ export function TrackHero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1, ease: easeOut }}
-        className="mt-[1.5vw] font-display text-[length:max(35px,3.38vw)] font-extrabold leading-tight tracking-[-0.02em] text-navy-900 max-lg:mt-4 max-lg:text-4xl max-md:text-3xl"
+        className="mt-[1.1vw] font-display text-[length:max(35px,3.38vw)] font-extrabold leading-tight tracking-[-0.02em] text-navy-900 max-lg:mt-4 max-lg:text-4xl max-md:text-3xl"
       >
         Track Your Shipment
       </motion.h1>
@@ -34,7 +34,7 @@ export function TrackHero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: easeOut }}
-        className="mt-[0.38vw] font-display text-[length:max(16px,1.56vw)] font-bold text-[#8A5A0B] max-lg:text-lg"
+        className="mt-[0.28vw] font-display text-[length:max(16px,1.56vw)] font-bold text-[#8A5A0B] max-lg:text-lg"
       >
         Stay Updated at Every Movement
       </motion.p>
@@ -43,7 +43,7 @@ export function TrackHero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3, ease: easeOut }}
-        className="mx-auto mt-[1.12vw] max-w-[44vw] text-[length:max(12px,1.19vw)] leading-[1.65] text-[#454E5C] max-lg:mt-3 max-lg:max-w-none max-lg:text-sm"
+        className="mx-auto mt-[0.9vw] max-w-[59vw] text-[length:max(12px,1.1vw)] leading-[1.60] text-[#454E5C] max-lg:mt-3 max-lg:max-w-none max-lg:text-sm"
       >
         Track your CRL shipment quickly using your LR / Docket Number. CRL provides online
         shipment tracking with movement updates so customers can stay informed throughout the

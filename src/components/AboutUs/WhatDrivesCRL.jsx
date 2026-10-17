@@ -189,7 +189,7 @@ export function WhatDrivesCRL() {
                   pt-[40px]
                   pb-[35px]
                   pr-[45px]
-
+                  pl-[20px]
                   border-b
                   border-[#E3E6EA]
 

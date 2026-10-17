@@ -14,7 +14,7 @@ export function TrackSearchCard({ value, onChange, onSubmit, onClear, onSample, 
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4, ease: easeOut }}
       className="
-        mx-auto mt-[3.25vw] max-w-[56vw] rounded-[1vw] bg-white p-[1.62vw]
+        mx-auto mt-[2.25vw] max-w-[56vw] rounded-[1vw] bg-white p-[1.62vw]
         shadow-[0_14px_40px_rgba(7,17,31,0.12)]
         max-lg:mt-8 max-lg:max-w-2xl max-lg:rounded-xl max-lg:p-5
       "
