@@ -1,6 +1,13 @@
+
 import React from 'react';
 import { MotionConfig } from 'framer-motion';
-import { CircleDollarSign, ShieldCheck, MessageCircle, Eye, House } from 'lucide-react';
+import {
+  Route,
+  Handshake,
+  PackageCheck,
+  ClipboardCheck,
+  Headset,
+} from 'lucide-react';
 
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/Footer';
@@ -17,13 +24,28 @@ import overviewImage from '../../assets/service.jpg';
 import deliveryImage from '../../assets/Services/service-delivery.png';
 import packingImage from '../../assets/Services/service-packing.png';
 
-// data file stores icon names as strings; ServiceBenefits needs components
+// Icons selected according to each benefit's meaning
 const iconMap = {
-  route: { Icon: CircleDollarSign, color: 'bg-blue-50 text-blue-500' },
-  'shield-check': { Icon: ShieldCheck, color: 'bg-emerald-50 text-emerald-500' },
-  'message-circle': { Icon: MessageCircle, color: 'bg-purple-50 text-purple-500' },
-  eye: { Icon: Eye, color: 'bg-amber-50 text-amber-500' },
-  house: { Icon: House, color: 'bg-sky-50 text-sky-500' },
+  route: {
+    Icon: Route,
+    color: 'bg-blue-50 text-blue-500',
+  },
+  'shield-check': {
+    Icon: Handshake,
+    color: 'bg-emerald-50 text-emerald-500',
+  },
+  'message-circle': {
+    Icon: PackageCheck,
+    color: 'bg-purple-50 text-purple-500',
+  },
+  eye: {
+    Icon: ClipboardCheck,
+    color: 'bg-amber-50 text-amber-500',
+  },
+  house: {
+    Icon: Headset,
+    color: 'bg-sky-50 text-sky-500',
+  },
 };
 
 export function MultimodeTransportationPage() {
@@ -72,8 +94,14 @@ export function MultimodeTransportationPage() {
 
                 <ServiceBenefits
                   images={[
-                    { src: deliveryImage, alt: 'CRL team handling a shipment' },
-                    { src: packingImage, alt: 'Careful packing and sealing of a shipment' },
+                    {
+                      src: deliveryImage,
+                      alt: 'CRL team handling a shipment',
+                    },
+                    {
+                      src: packingImage,
+                      alt: 'Careful packing and sealing of a shipment',
+                    },
                   ]}
                   kicker={benefits.eyebrow}
                   heading={benefits.title}
@@ -108,3 +136,4 @@ export function MultimodeTransportationPage() {
     </MotionConfig>
   );
 }
+

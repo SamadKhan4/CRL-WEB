@@ -22,10 +22,13 @@ function validate(values) {
 }
 
 const inputClass = (hasError) => `
-  w-full rounded-[0.5vw] border bg-white px-[0.8vw] py-[0.65vw]
-  text-[0.8vw] text-navy-900 outline-none placeholder:text-[#7B8594]
-  transition-all duration-200 focus:border-crl focus:ring-2 focus:ring-crl/15
-  max-lg:rounded-lg max-lg:px-3 max-lg:py-2.5 max-lg:text-sm
+  w-full rounded-[0.5vw] border bg-white
+  px-[1vw] py-[0.9vw]
+  text-[0.9vw] text-navy-900
+  outline-none placeholder:text-[#7B8594]
+  transition-all duration-200
+  focus:border-crl focus:ring-2 focus:ring-crl/15
+  max-lg:rounded-lg max-lg:px-3 max-lg:py-3 max-lg:text-sm
   ${hasError ? 'border-crl' : 'border-[#D9DEE5]'}
 `;
 
@@ -71,7 +74,7 @@ export function ContactForm() {
       transition={{ duration: 0.7, ease: easeOut }}
       className="
         rounded-[1vw] border border-[#E3E7ED] bg-white
-        p-[1.4286vw] shadow-[0_4px_20px_rgba(7,17,31,0.03)]
+       p-[2vw] max-lg:p-6  shadow-[0_4px_20px_rgba(7,17,31,0.03)]
         max-lg:rounded-2xl max-lg:p-5
       "
     >

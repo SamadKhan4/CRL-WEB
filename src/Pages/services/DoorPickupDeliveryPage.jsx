@@ -64,13 +64,14 @@ export function DoorPickupDeliveryPage() {
          
 
               <DoorPickupHowItWorks steps={howItWorks} />
-     <ServiceBenefits
-                 showImages={false}
-                kicker={benefits.eyebrow}
-                heading={benefits.heading}
-                description={benefits.description}
-                benefits={benefits.cards}
-              />
+    <ServiceBenefits
+  showImages={false}
+  displayStyle="red-dots"
+  kicker={benefits.eyebrow}
+  heading={benefits.heading}
+  description={benefits.description}
+  benefits={benefits.cards}
+/>
 
               <ServiceCta
                 heading="Need Reliable Door Pickup &"

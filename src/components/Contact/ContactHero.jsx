@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronRightIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-import heroImage from '../../assets/Services/serviceshero.png';
+import heroImage from '../../assets/contact.png';
 import { easeOut } from '../../utils/motion';
 import { contactHero } from '../../data/contact';
 

@@ -1,6 +1,13 @@
+
 import React from 'react';
 import { MotionConfig } from 'framer-motion';
-import { CircleDollarSign, ShieldCheck, MessageCircle, Eye, House } from 'lucide-react';
+import {
+  Warehouse,
+  Route,
+  MapPin,
+  ClipboardList,
+  Truck,
+} from 'lucide-react';
 
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/Footer';
@@ -16,22 +23,41 @@ import overviewImage from '../../assets/Services/WhatFLT.png';
 import deliveryImage from '../../assets/Services/service-delivery.png';
 import packingImage from '../../assets/Services/service-packing.png';
 
-// data file stores icon names as strings; ServiceBenefits needs components
-const iconMap = {
-  CircleDollarSign: { Icon: CircleDollarSign, color: 'bg-blue-50 text-blue-500' },
-  ShieldCheck: { Icon: ShieldCheck, color: 'bg-emerald-50 text-emerald-500' },
-  MessageCircle: { Icon: MessageCircle, color: 'bg-purple-50 text-purple-500' },
-  Eye: { Icon: Eye, color: 'bg-amber-50 text-amber-500' },
-  House: { Icon: House, color: 'bg-sky-50 text-sky-500' },
+// Icons and colors matched to Hub-to-Hub benefit text
+const hubBenefitIconMap = {
+  'Origin Handling': {
+    Icon: Warehouse,
+    color: 'bg-blue-50 text-blue-500',
+  },
+  'Inter-Hub Movement': {
+    Icon: Route,
+    color: 'bg-emerald-50 text-emerald-500',
+  },
+  'Destination Processing': {
+    Icon: MapPin,
+    color: 'bg-purple-50 text-purple-500',
+  },
+  'Processing & Coordination': {
+    Icon: ClipboardList,
+    color: 'bg-amber-50 text-amber-500',
+  },
+  'Delivery / Collection': {
+    Icon: Truck,
+    color: 'bg-sky-50 text-sky-500',
+  },
 };
 
 export function HubToHubConnectivityPage() {
   const { serviceName, overview, benefits, cta } = hubToHubData;
 
-  const benefitCards = benefits.cards.map((card) => ({
-    ...card,
-    ...(iconMap[card.icon] ?? {}),
-  }));
+  const benefitCards = benefits.cards.map((card) => {
+    const matchedIcon = hubBenefitIconMap[card.title];
+
+    return {
+      ...card,
+      ...(matchedIcon || {}),
+    };
+  });
 
   return (
     <MotionConfig reducedMotion="user">
@@ -69,8 +95,14 @@ export function HubToHubConnectivityPage() {
 
                 <ServiceBenefits
                   images={[
-                    { src: deliveryImage, alt: 'CRL team handling a shipment' },
-                    { src: packingImage, alt: 'Careful packing and sealing of a shipment' },
+                    {
+                      src: deliveryImage,
+                      alt: 'CRL team handling a shipment',
+                    },
+                    {
+                      src: packingImage,
+                      alt: 'Careful packing and sealing of a shipment',
+                    },
                   ]}
                   kicker=""
                   heading={benefits.heading}
