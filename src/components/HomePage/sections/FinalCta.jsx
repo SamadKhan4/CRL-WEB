@@ -1,4 +1,50 @@
-
+// import React from 'react';
+// import { PhoneIcon } from 'lucide-react';
+// import { images } from '../../../data/images';
+// import { contactDetails } from '../../../data/company';
+// import { ButtonLink } from '../../ui/ButtonLink';
+// import { Reveal } from '../../ui/Reveal';
+// export function FinalCta() {
+//     return (<section id="quote" aria-labelledby="cta-heading" className="final-cta text-white">
+//       <div className="final-cta__card relative overflow-hidden bg-navy-900 py-24 sm:py-32">
+//       <img src={images.hero} alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 h-full w-full object-cover"/>
+//       <div className="absolute inset-0 bg-navy-900/80" aria-hidden="true"/>
+//       <div className="container-crl relative grid gap-10 lg:grid-cols-12 lg:items-end">
+//         <Reveal className="lg:col-span-8">
+//           <p className="font-display text-base font-semibold text-crl-light">Your Goods. Our Responsibility.</p>
+//           <h2 id="cta-heading" className="mt-5 font-display text-[clamp(2.5rem,7vw,5.5rem)] font-extrabold leading-[1.02] tracking-[-0.04em]">
+            
+//             Have Freight to Move?
+//           </h2>
+//           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
+//             Tell us where your shipment needs to go. CRL will help plan the movement.
+//           </p>
+//           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+//             <ButtonLink href={`mailto:${contactDetails.email}?subject=${encodeURIComponent('Quote request — CRL Transport')}`} size="lg">
+              
+//               Request a Quote
+//             </ButtonLink>
+//             <ButtonLink href="#contact" size="lg" variant="outline-light">
+//               Contact CRL
+//             </ButtonLink>
+//           </div>
+//         </Reveal>
+//         <Reveal delay={0.1} className="lg:col-span-4">
+//           <a href={contactDetails.phoneHref} className="group flex items-center gap-4 border-t border-white/15 pt-6 lg:justify-end lg:border-t-0 lg:pt-0">
+            
+//             <span className="flex h-12 w-12 items-center justify-center rounded-full bg-crl transition-colors duration-200 group-hover:bg-crl-dark">
+//               <PhoneIcon className="h-5 w-5" aria-hidden="true"/>
+//             </span>
+//             <span>
+//               <span className="block text-sm text-white/60">Call CRL</span>
+//               <span className="block font-display text-xl font-bold">{contactDetails.phone}</span>
+//             </span>
+//           </a>
+//         </Reveal>
+//       </div>
+//       </div>
+//     </section>);
+// }
 import React from 'react';
 import { PhoneIcon } from 'lucide-react';
 import { images } from '../../../data/images';
@@ -12,6 +58,7 @@ export function FinalCta() {
       id="quote"
       aria-labelledby="cta-heading"
       className="final-cta text-white"
+      
     >
       <div
         className="
@@ -19,10 +66,12 @@ export function FinalCta() {
           relative
           overflow-hidden
           bg-navy-900
-          py-[3.6571vw]
-     
-          max-lg:py-24
-          sm:max-lg:py-32
+          py-12
+          pl-[20px]
+          md:!w-[calc(100%-9vw)]
+          md:!max-w-[1800px]
+          sm:py-14
+          lg:py-[clamp(36px,6.4vw,59px)]
         "
       >
         <img
@@ -30,6 +79,7 @@ export function FinalCta() {
           alt=""
           aria-hidden="true"
           loading="lazy"
+          
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -43,22 +93,21 @@ export function FinalCta() {
             container-crl
             relative
             grid
-            gap-[2.8571vw]
+            lg:max-w-[1560px]
+            gap-8
             lg:grid-cols-12
             lg:items-end
-
-            max-lg:gap-10
+            lg:gap-[clamp(24px,2.4vw,40px)]
           "
         >
           <Reveal className="lg:col-span-8">
             <p
               className="
                 font-display
-                text-[1.1429vw]
+                text-base
                 font-semibold
                 text-crl-light
-
-                max-lg:text-base
+                lg:text-[length:clamp(14px,1.1vw,17px)]
               "
             >
               Your Goods. Our Responsibility.
@@ -67,15 +116,14 @@ export function FinalCta() {
             <h2
               id="cta-heading"
               className="
-                mt-[1.4286vw]
+                mt-3
                 font-display
-                text-[5vw]
+                text-[clamp(2rem,7vw,3.25rem)]
                 font-extrabold
-                leading-[1.02]
+                leading-[1.05]
                 tracking-[-0.04em]
-
-                max-lg:mt-5
-                max-lg:text-[clamp(2.5rem,7vw,5.5rem)]
+                lg:mt-[clamp(10px,1vw,16px)]
+                lg:text-[length:clamp(40px,3.8vw,58px)]
               "
             >
               Have Freight to Move?
@@ -83,15 +131,14 @@ export function FinalCta() {
 
             <p
               className="
-                mt-[1.7143vw]
-                max-w-[42.8571vw]
-                text-[1.2857vw]
+                mt-4
+                max-w-xl
+                text-base
                 leading-relaxed
                 text-white/75
-
-                max-lg:mt-6
-                max-lg:max-w-xl
-                max-lg:text-lg
+                lg:mt-[clamp(12px,1.1vw,18px)]
+                lg:max-w-[clamp(420px,38vw,600px)]
+                lg:text-[length:clamp(15px,1.15vw,18px)]
               "
             >
               Tell us where your shipment needs to go. CRL will help plan the
@@ -100,22 +147,16 @@ export function FinalCta() {
 
             <div
               className="
-                mt-[2.8571vw]
+                mt-6
                 flex
                 flex-col
-                gap-[0.8571vw]
+                gap-3
                 sm:flex-row
-
-                max-lg:mt-10
-                max-lg:gap-3
+                lg:mt-[clamp(20px,1.9vw,30px)]
+                lg:gap-[clamp(10px,.8vw,14px)]
               "
             >
-             <ButtonLink
-  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-    contactDetails.email
-  )}&su=${encodeURIComponent('Quote request — CRL Transport')}`}
-  size="lg"
->
+             <ButtonLink href="/request-quote" size="lg">
   Request a Quote
 </ButtonLink>
 
@@ -136,23 +177,21 @@ export function FinalCta() {
                 group
                 flex
                 items-center
-                gap-[1.1429vw]
+                gap-4
                 border-t
                 border-white/15
-                pt-[1.7143vw]
+                pt-5
                 lg:justify-end
+                lg:gap-[clamp(12px,1.1vw,18px)]
                 lg:border-t-0
                 lg:pt-0
-
-                max-lg:gap-4
-                max-lg:pt-6
               "
             >
               <span
                 className="
                   flex
-                  h-[3.4286vw]
-                  w-[3.4286vw]
+                  h-12
+                  w-12
                   shrink-0
                   items-center
                   justify-center
@@ -161,18 +200,16 @@ export function FinalCta() {
                   transition-colors
                   duration-200
                   group-hover:bg-crl-dark
-
-                  max-lg:h-12
-                  max-lg:w-12
+                  lg:h-[clamp(40px,3.1vw,50px)]
+                  lg:w-[clamp(40px,3.1vw,50px)]
                 "
               >
                 <PhoneIcon
                   className="
-                    h-[1.4286vw]
-                    w-[1.4286vw]
-
-                    max-lg:h-5
-                    max-lg:w-5
+                    h-5
+                    w-5
+                    lg:h-[clamp(16px,1.3vw,20px)]
+                    lg:w-[clamp(16px,1.3vw,20px)]
                   "
                   aria-hidden="true"
                 />
@@ -182,10 +219,9 @@ export function FinalCta() {
                 <span
                   className="
                     block
-                    text-[1vw]
+                    text-sm
                     text-white/60
-
-                    max-lg:text-sm
+                    lg:text-[length:clamp(12px,.9vw,14px)]
                   "
                 >
                   Call CRL
@@ -195,10 +231,9 @@ export function FinalCta() {
                   className="
                     block
                     font-display
-                    text-[1.4286vw]
+                    text-xl
                     font-bold
-
-                    max-lg:text-xl
+                    lg:text-[length:clamp(18px,1.4vw,22px)]
                   "
                 >
                   {contactDetails.phone}
