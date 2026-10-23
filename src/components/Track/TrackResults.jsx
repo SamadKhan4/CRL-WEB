@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import { JourneyStepper } from './JourneyStepper';
@@ -7,6 +8,10 @@ import { FleetTelematics } from './FleetTelematics';
 import { RouteMapCard } from './RouteMapCard';
 
 export function TrackResults({ shipment }) {
+  if (!shipment) {
+    return null;
+  }
+
   return (
     <div
       className="
@@ -15,15 +20,27 @@ export function TrackResults({ shipment }) {
         max-md:w-[calc(100%-32px)]
       "
     >
-      <JourneyStepper journey={shipment.journey} />
+      <JourneyStepper
+        journey={shipment.journey}
+      />
 
       <div className="grid grid-cols-[minmax(0,2.15fr)_minmax(0,1fr)] items-start gap-[1.75vw] max-lg:grid-cols-1 max-lg:gap-5">
-        <MovementTimeline timeline={shipment.timeline} />
+        <MovementTimeline
+          timeline={shipment.timeline}
+        />
 
         <div className="space-y-[1.75vw] max-lg:space-y-5">
-          <ShipmentSpecs specs={shipment.specifications} />
-          <FleetTelematics telematics={shipment.telematics} />
-          <RouteMapCard route={shipment.route} />
+          <ShipmentSpecs
+            specs={shipment.specifications}
+          />
+
+          <FleetTelematics
+            telematics={shipment.telematics}
+          />
+
+          <RouteMapCard
+            route={shipment.route}
+          />
         </div>
       </div>
     </div>
