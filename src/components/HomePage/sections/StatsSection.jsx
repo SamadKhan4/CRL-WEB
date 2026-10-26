@@ -153,7 +153,7 @@ export function StatsSection({ showPlaceholders }) {
   return (
     <section
       aria-label="CRL in numbers"
-      className="w-full bg-[#F5F6F8] px-3 py-5"
+      className="w-full bg-[#F5F6F8] px-3 py-2"
     >
       <div
         className="
@@ -165,7 +165,7 @@ export function StatsSection({ showPlaceholders }) {
         <div
           className="
             flex w-full items-center justify-between gap-10
-            px-[90px] py-[50px]
+            px-[90px] py-[70px]
             max-[1100px]:px-[60px]
             max-lg:flex-col max-lg:items-start max-lg:gap-7
             max-md:px-7 max-md:py-8
@@ -182,7 +182,7 @@ export function StatsSection({ showPlaceholders }) {
               <dt className="order-2 font-['Instrument_Sans',sans-serif] text-[13px] font-normal text-[#AEB4BE] max-md:text-xs">
                 Next-Day Service Locations
               </dt>
-              <dd className="order-1 flex items-baseline font-['Instrument_Sans',sans-serif] text-[48px] font-semibold leading-none tracking-[-1.5px] text-white max-[1100px]:text-[42px] max-md:text-[34px]">
+              <dd className="order-1 flex items-baseline font-['Instrument_Sans',sans-serif] text-[60px] font-semibold leading-none tracking-[-1.5px] text-white max-[1100px]:text-[42px] max-md:text-[34px]">
                 <CountUp value={24} />
                 <span aria-hidden="true">hr</span>
               </dd>
@@ -193,7 +193,7 @@ export function StatsSection({ showPlaceholders }) {
                 Operations
               </dt>
               <dd
-                className="order-1 font-['Instrument_Sans',sans-serif] text-[48px] font-semibold leading-none tracking-[-1.5px] text-white max-[1100px]:text-[42px] max-md:text-[34px]"
+                className="order-1 font-['Instrument_Sans',sans-serif] text-[60px] font-semibold leading-none tracking-[-1.5px] text-white max-[1100px]:text-[42px] max-md:text-[34px]"
                 aria-label="24 hours a day, 7 days a week"
               >
                 24{' '}
@@ -217,7 +217,7 @@ export function StatsSection({ showPlaceholders }) {
               <dl className="grid grid-cols-3 gap-10 max-md:gap-4">
                 {placeholderStats.map((stat) => (
                   <div key={stat.label} className="flex flex-col gap-0.5">
-                    <dd className="order-1 font-['Instrument_Sans',sans-serif] text-[22px] font-semibold leading-tight text-[#6B7280] max-md:text-lg">
+                    <dd className="order-1 font-['Instrument_Sans',sans-serif] text-[48px] font-semibold leading-tight text-[#6B7280] max-md:text-lg">
                       {stat.display}
                     </dd>
                     <dt className="order-2 font-['Instrument_Sans',sans-serif] text-xs font-normal text-[#6B7280] max-md:text-[11px]">

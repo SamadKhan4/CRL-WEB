@@ -12,7 +12,7 @@ export function FinalCta() {
     <section
       id="quote"
       aria-labelledby="cta-heading"
-      className="w-full bg-[#F5F6F8] px-3 py-5"
+      className="w-full bg-[#F5F6F8] px-3 py-8"
     >
       <div
         className="
