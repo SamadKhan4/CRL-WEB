@@ -12,11 +12,11 @@ export function FinalCta() {
     <section
       id="quote"
       aria-labelledby="cta-heading"
-      className="w-full bg-[#F5F6F8] px-8 py-8 "
+      className="w-full bg-[#F5F6F8] px-3 py-5"
     >
       <div
         className="
-          relative mx-auto w-full max-w-[1530px]
+          relative mx-auto w-full max-w-[1500px]
           min-h-[475px] overflow-hidden rounded-[20px]
           max-md:min-h-[560px] max-md:rounded-[16px]
         "
@@ -65,23 +65,30 @@ export function FinalCta() {
               className="
                 mt-3 font-['Instrument_Sans',sans-serif]
                 text-[56px] font-semibold
-                leading-[1.08] tracking-[-1.8px] text-white
+                leading-[1.08] tracking-[-1.8px]
+                text-white
                 max-[1100px]:text-[48px]
-                max-md:text-[38px] max-md:leading-[1.08]
+                max-md:text-[38px]
+                max-md:leading-[1.08]
                 max-md:tracking-[-1px]
               "
             >
               Have Freight
               <br />
               to Move?
+              <br />
+              <span className="text-[#FF535A]">
+                We’re Here to Help.
+              </span>
             </h2>
 
             <p
               className="
                 mt-[22px] max-w-[470px]
                 font-['Instrument_Sans',sans-serif]
-                text-[15px] font-normal leading-[1.55]
-                text-[#D1D5DB] max-md:mt-[18px]
+                text-[15px] font-normal
+                leading-[1.55] text-[#D1D5DB]
+                max-md:mt-[18px]
               "
             >
               Tell us where your shipment needs to go. CRL will help plan the
@@ -91,7 +98,8 @@ export function FinalCta() {
             {/* BUTTONS */}
             <div
               className="
-                mt-[30px] flex flex-wrap items-center gap-[14px]
+                mt-[30px] flex flex-wrap
+                items-center gap-[14px]
                 max-md:mt-[25px]
               "
             >
@@ -114,25 +122,31 @@ export function FinalCta() {
             delay={0.1}
             className="
               shrink-0 translate-y-[105px] self-center
-              max-md:translate-y-0 max-md:self-start
+              max-md:translate-y-0
+              max-md:self-start
             "
           >
             <a
               href={contactDetails.phoneHref}
               className="
-                group flex items-center gap-[14px] no-underline
+                group flex items-center gap-[14px]
+                no-underline
               "
             >
               <span
                 className="
                   flex h-[42px] w-[42px] shrink-0
-                  items-center justify-center rounded-full
-                  bg-[#E51B23] text-white
+                  items-center justify-center
+                  rounded-full bg-[#E51B23] text-white
                   transition-transform duration-300
                   group-hover:scale-110
                 "
               >
-                <PhoneIcon size={18} strokeWidth={2} aria-hidden="true" />
+                <PhoneIcon
+                  size={18}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
               </span>
 
               <span className="flex flex-col">
@@ -148,9 +162,10 @@ export function FinalCta() {
 
                 <span
                   className="
-                    mt-[3px] font-['Instrument_Sans',sans-serif]
-                    text-[15px] font-semibold leading-[1.2]
-                    text-white
+                    mt-[3px]
+                    font-['Instrument_Sans',sans-serif]
+                    text-[15px] font-semibold
+                    leading-[1.2] text-white
                   "
                 >
                   {contactDetails.phone}
