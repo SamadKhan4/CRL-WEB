@@ -184,7 +184,7 @@ export function StatsSection({ showPlaceholders }) {
               </dt>
               <dd className="order-1 flex items-baseline font-['Instrument_Sans',sans-serif] text-[60px] font-semibold leading-none tracking-[-1.5px] text-white max-[1100px]:text-[42px] max-md:text-[34px]">
                 <CountUp value={24} />
-                <span aria-hidden="true">hr</span>
+                
               </dd>
             </div>
 
