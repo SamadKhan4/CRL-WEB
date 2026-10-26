@@ -20,6 +20,12 @@ export function StatsSection({ showPlaceholders }) {
 
             <dd className="stats-section__value md:!text-[length:4.4vw]">
               <CountUp value={24} />
+              <span
+                className=""
+                aria-hidden="true"
+              >
+                hr
+              </span>
             </dd>
           </div>
 
@@ -60,12 +66,12 @@ export function StatsSection({ showPlaceholders }) {
               ))}
             </dl>
 
-            <p className="stats-section__notice md:!mt-[1.3vw] md:!text-[length:0.75vw]">
-              Placeholder &mdash; replace with verified CRL data.
-            </p>
+          
           </div>
         )}
       </div>
     </section>
   );
 }
+
+

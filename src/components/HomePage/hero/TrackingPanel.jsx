@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import { Loader2Icon, AlertCircleIcon, InfoIcon, XIcon } from 'lucide-react';
 import { useShipmentTracking } from '../../../hooks/useShipmentTracking';
 import { trackingStages } from '../../../utils/tracking';
@@ -75,17 +76,37 @@ export function TrackingPanel() {
                       <XIcon className="h-4 w-4" aria-hidden="true"/>
                     </button>
                   </div>
-                  <ol className="mt-6 grid grid-cols-4 gap-2" aria-label="Shipment progress">
-                    {trackingStages.map((stage, i) => {
-                    const done = i <= state.data.stage;
-                    return (<li key={stage}>
-                          <span className={`block h-1 rounded-full ${done ? 'bg-crl' : 'bg-line'}`}/>
-                          <span className={`mt-2 block text-xs font-medium sm:text-sm ${done ? 'text-ink' : 'text-body'}`}>
-                            {stage}
-                          </span>
-                        </li>);
-                })}
-                  </ol>
+                 <ol
+  className="mt-6 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4"
+  aria-label="Shipment progress"
+>
+  {trackingStages.map((stage, index) => {
+    const done = index <= state.data.stage;
+    const active = index === state.data.stage;
+
+    return (
+      <li key={stage}>
+        <span
+          className={`block h-1 rounded-full transition-colors duration-300 ${
+            done ? 'bg-crl' : 'bg-line'
+          }`}
+        />
+
+        <span
+          className={`mt-2 block text-xs font-medium sm:text-sm ${
+            active
+              ? 'text-crl'
+              : done
+                ? 'text-ink'
+                : 'text-body'
+          }`}
+        >
+          {stage}
+        </span>
+      </li>
+    );
+  })}
+</ol>
                   {state.data.isDemo &&
                     <p className="mt-5 flex items-center gap-2 text-xs text-body">
                       <InfoIcon className="h-3.5 w-3.5 shrink-0" aria-hidden="true"/>

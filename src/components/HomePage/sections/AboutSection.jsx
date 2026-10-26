@@ -122,7 +122,7 @@ export function AboutSection() {
 </div>
 
             <div className="mt-[2.8571vw] max-lg:mt-10">
-              <ButtonLink href="/contact" variant="dark" size="lg">
+              <ButtonLink href="/about-us" variant="dark" size="lg">
                 Discover CRL
               </ButtonLink>
             </div>

@@ -36,8 +36,7 @@ export function NetworkSection() {
     <section
       id="network"
       aria-labelledby="network-heading"
-      className="mt-[5vw] bg-navy-900 py-20 text-white sm:py-28"
-    >
+className="mt-[5vw] bg-navy-900 py-20 text-white sm:py-28"    >
       <div className="container-crl">
         {/* Section Heading */}
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
@@ -138,11 +137,11 @@ export function NetworkSection() {
 
             {/* Locations Panel */}
             <div
-              id="network-panel"
-              role="tabpanel"
-              aria-labelledby={`tab-${tier}`}
-              className="mt-8 flex-1"
-            >
+  id="network-panel"
+  role="tabpanel"
+  aria-labelledby={`tab-${tier}`}
+  className="mt-8 min-h-[260px] flex-1"
+>
               <div className="flex items-baseline justify-between gap-4">
                 <p className="font-display text-5xl font-extrabold tracking-tight">
                   {cities.length}
@@ -167,7 +166,7 @@ export function NetworkSection() {
                     ease: [0.23, 1, 0.32, 1],
                   }}
                 >
-                  <ul className="mt-6 flex flex-wrap gap-2">
+                 <ul className="mt-6 flex min-h-[76px] content-start flex-wrap gap-2">
                     {visibleCities.map((city) => (
                       <li key={city.name}>
                         <button
@@ -250,14 +249,14 @@ export function NetworkSection() {
             </div>
 
             {/* Bottom CTA */}
-            <div className="mt-10 flex flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-10 flex min-h-[66px] flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-xs text-sm text-white/55">
                 Transit times are indicative from Nagpur and may
                 vary with shipment and route conditions.
               </p>
 
               <ButtonLink
-                href="#quote"
+                href="/request-quote"
                 variant="outline-light"
               >
                 Check your route

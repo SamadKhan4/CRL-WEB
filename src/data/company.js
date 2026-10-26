@@ -43,8 +43,8 @@ export const industries = [
     { title: 'Bulk Consignments', detail: 'High-volume loads in one movement', image: images.hub, span: 'lg:col-span-5' }
 ];
 export const placeholderStats = [
-    { display: 'XX+', label: 'Customers' },
-    { display: 'XX+', label: 'Shipments' },
+    { display: '100+', label: 'Customers' },
+    { display: '200+', label: 'Shipments' },
     { display: 'XX+', label: 'Vehicles' }
 ];
 export const contactDetails = {

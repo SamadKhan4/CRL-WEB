@@ -110,14 +110,16 @@ export function MovementTimeline({ timeline }) {
         </p>
       ) : (
         <ol className="relative mt-[1.5vw] max-lg:mt-5">
-          {/* Timeline vertical line */}
-        <span
+      
+{/* Timeline vertical line */}
+<span
   aria-hidden="true"
   className="
     pointer-events-none absolute
-    left-[21px] top-6 bottom-6
-    w-px bg-[#DDE3ED]
-    max-lg:left-[22px]
+    left-[29px] top-6 bottom-6
+    w-0.5 -translate-x-1/2
+    bg-[#DDE3ED]
+    max-lg:left-[26px]
   "
 />
 

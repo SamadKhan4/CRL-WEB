@@ -1,29 +1,43 @@
-import { useCallback, useState } from 'react';
-import { fetchShipmentStatus } from '../utils/tracking';
+
+import { useCallback } from 'react';
+import { useTrackShipment } from './useTrackShipment';
+
 export function useShipmentTracking() {
-    const [state, setState] = useState({ status: 'idle' });
-    const track = useCallback(async (input) => {
-        const value = input.trim().toUpperCase();
-        if (!value) {
-            setState({ status: 'error', error: 'Enter your LR / Docket number to track your shipment.' });
-            return;
+  const {
+    state: originalState,
+    track: originalTrack,
+    reset: originalReset,
+  } = useTrackShipment();
+
+  const track = useCallback(
+    (lrNumber) => originalTrack(lrNumber),
+    [originalTrack],
+  );
+
+  const reset = useCallback(() => {
+    originalReset();
+  }, [originalReset]);
+
+  const data = originalState.data;
+
+  const state = {
+    status: originalState.status,
+    error: originalState.error || '',
+    data: data
+      ? {
+          ...data,
+          expectedDelivery:
+            data.expectedDeliveryDate || 'Unavailable',
+          podStatus:
+            data.specifications?.podStatus || 'Not confirmed',
+          stage: Math.max(
+            0,
+            (data.journey?.currentStage || 1) - 1,
+          ),
+          isDemo: false,
         }
-        if (!/^[A-Z0-9-]{4,20}$/.test(value)) {
-            setState({ status: 'error', error: 'LR / Docket numbers contain 4–20 letters or digits.' });
-            return;
-        }
-        setState({ status: 'loading' });
-        try {
-            const data = await fetchShipmentStatus(value);
-            setState({ status: 'success', data });
-        }
-        catch (err) {
-            setState({
-                status: 'error',
-                error: err instanceof Error ? err.message : 'Tracking is unavailable right now. Please try again.'
-            });
-        }
-    }, []);
-    const reset = useCallback(() => setState({ status: 'idle' }), []);
-    return { state, track, reset };
+      : null,
+  };
+
+  return { state, track, reset };
 }
