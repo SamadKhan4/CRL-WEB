@@ -52,7 +52,6 @@ export function normalizeTracking(payload) {
     destination: text(data.destination),
     currentLocation: text(data.currentLocation),
     bookingDate: text(data.bookingDate),
-    expectedDeliveryDate: text(data.expectedDeliveryDate),
 
     transportMode: text(data.transportMode),
     packageCount: Number.isFinite(data.packageCount) ? data.packageCount : null,
@@ -62,7 +61,6 @@ export function normalizeTracking(payload) {
     vehicleType: text(data.vehicleType),
     vehicleCapacityKg: Number.isFinite(data.vehicleCapacityKg) ? data.vehicleCapacityKg : null,
     driverName: text(data.driverName),
-    driverMobile: text(data.driverMobile),
     sealNumber: text(data.sealNumber),
     trackingHistory: Array.isArray(data.trackingHistory)
       ? data.trackingHistory

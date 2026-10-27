@@ -184,9 +184,6 @@ const getSpecifications = (result) => ({
   packageCount: result.packageCount ?? 'Not provided',
   grossWeight: result.grossWeightKg != null ? `${result.grossWeightKg} kg` : 'Not provided',
   chargeableWeight: result.chargeableWeightKg != null ? `${result.chargeableWeightKg} kg` : 'Not provided',
-  estimatedDelivery: result.expectedDeliveryDate
-    ? formatDate(result.expectedDeliveryDate)
-    : 'Not provided by tracking service',
   podStatus:
     result.status === 'DELIVERED'
       ? 'Delivery status recorded; POD document not provided'
@@ -198,7 +195,6 @@ const getTelematics = (result) => ({
   vehicleNo: result.vehicleNumber || 'Not provided',
   vehicleType: result.vehicleType,
   driverName: result.driverName,
-  driverMobile: result.driverMobile,
   vehicleNote: text(result.currentLocation),
   engineHealth: 'Not provided by tracking service',
   gpsStatus: 'GPS coordinates not provided',

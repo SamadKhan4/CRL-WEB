@@ -109,12 +109,6 @@ export function ShipmentSpecs({ specs }) {
 
         <Row label="Chargeable Weight">{displayValue(data.chargeableWeight)}</Row>
 
-        <Row label="Estimated Delivery (EDD)" highlight>
-          <span className="text-[#1E3A8A]">
-            {displayValue(data.estimatedDelivery)}
-          </span>
-        </Row>
-
         <Row label="POD Document">
           <span className="inline-flex items-center gap-1 text-[#5D6672]">
             <CircleDashedIcon

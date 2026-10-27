@@ -54,7 +54,6 @@ export function FleetTelematics({ telematics }) {
         {[
           ['Vehicle Type', telematics?.vehicleType],
           ['Driver Name', telematics?.driverName],
-          ['Driver Number', telematics?.driverMobile],
         ].map(([label, value]) => (
           <div className="flex justify-between gap-3" key={label}>
             <dt className="text-[#4B5563]">{label}</dt>
