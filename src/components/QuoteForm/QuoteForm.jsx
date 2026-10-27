@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { AlertCircleIcon, Loader2Icon } from 'lucide-react';
@@ -48,6 +49,8 @@ export function QuoteForm() {
       <ShipmentDetailsSection {...sectionProps} />
       <AdditionalServicesSection values={values} onToggle={toggleAdditional} />
       <CommercialDetailsSection {...sectionProps} />
+
+      <p className="text-xs leading-6 text-[#5D6672]">We use the details you submit to respond to this request. Our forms send these details through EmailJS. Read our <Link to="/privacy-policy" className="font-semibold text-crl underline underline-offset-4">Privacy Policy</Link>.</p>
 
       <div className="pt-1">
         <motion.button

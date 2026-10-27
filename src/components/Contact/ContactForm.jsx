@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -277,6 +278,8 @@ export function ContactForm() {
           </AnimatePresence>
         </motion.div>
       ))}
+
+      <p className="text-xs leading-6 text-[#5D6672]">We use the details you submit to respond to this request. Our forms send these details through EmailJS. Read our <Link to="/privacy-policy" className="font-semibold text-crl underline underline-offset-4">Privacy Policy</Link>.</p>
 
       <motion.button
         type="submit"
