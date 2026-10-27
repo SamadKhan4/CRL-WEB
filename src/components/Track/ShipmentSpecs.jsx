@@ -103,15 +103,11 @@ export function ShipmentSpecs({ specs }) {
           {displayValue(data.packageCount)}
         </Row>
 
-        <Row label="Gross Chargeable Wt.">
+        <Row label="Gross Weight">
           {displayValue(data.grossWeight)}
         </Row>
 
-        <Row label="Current Highway Tag">
-          <span className="text-[#8A5A0B]">
-            {displayValue(data.currentHighwayTag)}
-          </span>
-        </Row>
+        <Row label="Chargeable Weight">{displayValue(data.chargeableWeight)}</Row>
 
         <Row label="Estimated Delivery (EDD)" highlight>
           <span className="text-[#1E3A8A]">

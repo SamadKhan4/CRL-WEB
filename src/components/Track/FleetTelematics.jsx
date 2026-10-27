@@ -51,6 +51,16 @@ export function FleetTelematics({ telematics }) {
       </div>
 
       <dl className="mt-[1vw] space-y-[0.62vw] text-[length:max(11px,0.78vw)] max-lg:mt-3 max-lg:space-y-2 max-lg:text-xs">
+        {[
+          ['Vehicle Type', telematics?.vehicleType],
+          ['Driver Name', telematics?.driverName],
+          ['Driver Number', telematics?.driverMobile],
+        ].map(([label, value]) => (
+          <div className="flex justify-between gap-3" key={label}>
+            <dt className="text-[#4B5563]">{label}</dt>
+            <dd className="text-right font-bold text-navy-900">{value || 'Not provided'}</dd>
+          </div>
+        ))}
         <div className="flex justify-between gap-3">
           <dt className="text-[#4B5563]">
             Battery / Engine Health

@@ -180,10 +180,10 @@ const getSpecifications = (result) => ({
     city: text(result.destination),
     terminal: 'Not provided by tracking service',
   },
-  transportMode: 'Not provided by tracking service',
-  packageCount: 'Not provided by tracking service',
-  grossWeight: 'Not provided by tracking service',
-  currentHighwayTag: 'Not provided by tracking service',
+  transportMode: result.transportMode || 'Not provided',
+  packageCount: result.packageCount ?? 'Not provided',
+  grossWeight: result.grossWeightKg != null ? `${result.grossWeightKg} kg` : 'Not provided',
+  chargeableWeight: result.chargeableWeightKg != null ? `${result.chargeableWeightKg} kg` : 'Not provided',
   estimatedDelivery: result.expectedDeliveryDate
     ? formatDate(result.expectedDeliveryDate)
     : 'Not provided by tracking service',
@@ -195,11 +195,14 @@ const getSpecifications = (result) => ({
 });
 
 const getTelematics = (result) => ({
-  vehicleNo: 'Not provided by tracking service',
+  vehicleNo: result.vehicleNumber || 'Not provided',
+  vehicleType: result.vehicleType,
+  driverName: result.driverName,
+  driverMobile: result.driverMobile,
   vehicleNote: text(result.currentLocation),
   engineHealth: 'Not provided by tracking service',
   gpsStatus: 'GPS coordinates not provided',
-  sealNumber: 'Not provided by tracking service',
+  sealNumber: result.sealNumber || 'Not provided',
   controllerPhone: '',
 });
 

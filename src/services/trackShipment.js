@@ -54,6 +54,16 @@ export function normalizeTracking(payload) {
     bookingDate: text(data.bookingDate),
     expectedDeliveryDate: text(data.expectedDeliveryDate),
 
+    transportMode: text(data.transportMode),
+    packageCount: Number.isFinite(data.packageCount) ? data.packageCount : null,
+    grossWeightKg: Number.isFinite(data.grossWeightKg) ? data.grossWeightKg : null,
+    chargeableWeightKg: Number.isFinite(data.chargeableWeightKg) ? data.chargeableWeightKg : null,
+    vehicleNumber: text(data.vehicleNumber),
+    vehicleType: text(data.vehicleType),
+    vehicleCapacityKg: Number.isFinite(data.vehicleCapacityKg) ? data.vehicleCapacityKg : null,
+    driverName: text(data.driverName),
+    driverMobile: text(data.driverMobile),
+    sealNumber: text(data.sealNumber),
     trackingHistory: Array.isArray(data.trackingHistory)
       ? data.trackingHistory
           .filter((event) => event && text(event.status))
