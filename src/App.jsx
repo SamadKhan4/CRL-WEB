@@ -13,10 +13,12 @@ import { MultimodeTransportationPage } from './Pages/services/MultimodeTransport
 import { ContactPage } from './Pages/ContactPage';
 import { TrackShipmentPage } from './Pages/TrackShipmentPage';
 import { RequestQuotePage } from './Pages/RequestQuotePage';
+import { TermsConditionsPage } from './Pages/TermsConditionsPage';
 export function App({ showPlaceholders = true }) {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />
         <Route
           path="/"
           element={<HomePage showPlaceholders={showPlaceholders} />}
