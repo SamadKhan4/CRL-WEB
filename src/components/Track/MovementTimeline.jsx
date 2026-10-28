@@ -32,7 +32,7 @@ function rich(text = '') {
 
 function Marker({ item }) {
   const base =
-    'relative z-10 flex h-[1.88vw] w-[1.88vw] shrink-0 items-center justify-center rounded-full max-lg:h-6 max-lg:w-6';
+    'relative z-10 flex justify-self-center h-[1.88vw] w-[1.88vw] shrink-0 items-center justify-center rounded-full max-lg:h-6 max-lg:w-6';
 
   const icon =
     'h-[1vw] w-[1vw] max-lg:h-3.5 max-lg:w-3.5';
@@ -116,7 +116,7 @@ export function MovementTimeline({ timeline }) {
   aria-hidden="true"
   className="
     pointer-events-none absolute
-    left-[29px] top-6 bottom-6
+    left-[32px] top-6 bottom-6
     w-0.5 -translate-x-1/2
     bg-[#DDE3ED]
     max-lg:left-[26px]
@@ -133,8 +133,8 @@ export function MovementTimeline({ timeline }) {
                   item.id ??
                   `${item.title ?? 'event'}-${item.time ?? index}-${index}`
                 }
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
                   delay: 0.25 + index * 0.1,
