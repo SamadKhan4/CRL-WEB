@@ -45,6 +45,7 @@ export function normalizeTracking(payload) {
 
   return {
     lrNumber: text(data.lrNumber),
+    podAvailable: data.podAvailable === true,
     status: text(data.status),
     statusLabel: text(data.statusLabel) || text(data.status),
     lrUploadEligible: data.lrUploadEligible === true,

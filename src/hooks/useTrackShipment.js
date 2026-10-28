@@ -185,7 +185,7 @@ const getSpecifications = (result) => ({
   grossWeight: result.grossWeightKg != null ? `${result.grossWeightKg} kg` : 'Not provided',
   chargeableWeight: result.chargeableWeightKg != null ? `${result.chargeableWeightKg} kg` : 'Not provided',
   podStatus:
-    result.status === 'DELIVERED'
+    result.podAvailable ? 'Available to download' : result.status === 'DELIVERED'
       ? 'Delivery status recorded; POD document not provided'
       : 'Not confirmed',
   note: '',

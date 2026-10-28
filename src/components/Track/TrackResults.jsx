@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { API_BASE_URL } from '../../services/trackShipment';
 
 import { JourneyStepper } from './JourneyStepper';
 import { MovementTimeline } from './MovementTimeline';
@@ -20,6 +21,7 @@ export function TrackResults({ shipment }) {
         max-md:w-[calc(100%-32px)]
       "
     >
+      {shipment.podAvailable && <div className="rounded-xl bg-white p-5 shadow-sm"><p className="mb-3 text-sm text-slate-600">Proof of delivery is available for your shipment.</p><a className="inline-flex rounded-lg bg-orange-600 px-5 py-3 font-semibold text-white" href={`${API_BASE_URL}/public/track/${encodeURIComponent(shipment.lrNumber)}/pod`} download>Download POD</a></div>}
       <JourneyStepper
         journey={shipment.journey}
       />
