@@ -21,6 +21,10 @@ const STATUS_LABELS = {
   ARRIVED_AT_DESTINATION: 'Arrived at Destination',
   OUT_FOR_DELIVERY: 'Out for Delivery',
   DELIVERED: 'Delivered',
+  POD_UPLOADED: 'POD Uploaded',
+  COMPLETED: 'Delivered',
+  CLOSED: 'Delivered',
+  DRS_CLOSED: 'Delivery Run Closed',
 };
 
 const STAGES = [
@@ -40,9 +44,9 @@ const STAGES = [
   {
     id: 6,
     title: 'At Destination',
-    statuses: ['ARRIVED_AT_DESTINATION', 'OUT_FOR_DELIVERY'],
+    statuses: ['ARRIVED_AT_DESTINATION', 'DESTINATION_HUB_INWARDED', 'DESTINATION_INWARDED', 'LAST_MILE_READY', 'DRS_ASSIGNED', 'OUT_FOR_DELIVERY', 'DELIVERY_ATTEMPTED', 'DELIVERY_FAILED'],
   },
-  { id: 7, title: 'Delivered', statuses: ['DELIVERED'] },
+  { id: 7, title: 'Delivered', statuses: ['DELIVERED', 'POD_UPLOADED', 'COMPLETED', 'CLOSED', 'DRS_CLOSED'] },
 ];
 
 const text = (value, fallback = 'Unavailable') => {
@@ -88,28 +92,13 @@ const getStageNumber = (status) => {
 };
 
 const getJourney = (result, history) => {
-  const latestEvent = history.reduce((latest, event) => {
-    const currentTime = Date.parse(event.timestamp || '');
-    const latestTime = Date.parse(latest?.timestamp || '');
-
-    if (!latest) return event;
-
-    if (
-      Number.isFinite(currentTime) &&
-      (!Number.isFinite(latestTime) || currentTime > latestTime)
-    ) {
-      return event;
-    }
-
-    return latest;
-  }, null);
-
-  const apiStage = getStageNumber(result.status);
-  const historyStage = getStageNumber(latestEvent?.status);
-
-  // Prefer the furthest known stage so an older API status
-  // doesn't move the journey backwards.
-  const currentStage = Math.max(apiStage, historyStage, 1);
+  // Later operational events must not reset shipment progress.
+  const currentStage = Math.max(
+    getStageNumber(result.status),
+    result.podAvailable ? 7 : 0,
+    ...history.map((event) => getStageNumber(event.status)),
+    1,
+  );
 
   return {
     totalStages: STAGES.length,

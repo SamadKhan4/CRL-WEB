@@ -3,9 +3,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArchiveIcon,
+  DownloadIcon,
   CircleDashedIcon,
   ShieldCheckIcon,
 } from 'lucide-react';
+
+import { API_BASE_URL } from '../../services/trackShipment';
 
 import { easeOut } from '../../utils/motion';
 
@@ -43,7 +46,7 @@ function Row({ label, children, highlight = false }) {
   );
 }
 
-export function ShipmentSpecs({ specs }) {
+export function ShipmentSpecs({ specs, podAvailable = false, lrNumber }) {
   const data = specs || {};
   const origin = data.origin || {};
   const destination = data.destination || {};
@@ -110,13 +113,22 @@ export function ShipmentSpecs({ specs }) {
         <Row label="Chargeable Weight">{displayValue(data.chargeableWeight)}</Row>
 
         <Row label="POD Document">
-          <span className="inline-flex items-center gap-1 text-[#5D6672]">
+          {podAvailable && lrNumber ? (
+            <a
+              href={`${API_BASE_URL}/public/track/${encodeURIComponent(lrNumber)}/pod`}
+              download
+              className="inline-flex items-center gap-2 rounded-md bg-[#EA580C] px-3 py-2 font-semibold text-white hover:bg-[#C2410C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EA580C]"
+            >
+              <DownloadIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+              Download POD
+            </a>
+          ) : <span className="inline-flex items-center gap-1 text-[#5D6672]">
             <CircleDashedIcon
               className="h-[1vw] w-[1vw] shrink-0 max-lg:h-3.5 max-lg:w-3.5"
               aria-hidden="true"
             />
             {displayValue(data.podStatus)}
-          </span>
+          </span>}
         </Row>
       </dl>
 
